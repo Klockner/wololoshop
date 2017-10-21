@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20171021024101) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", null: false
-    t.string "username", null: false
     t.string "cpf"
     t.date "birth"
     t.string "cellphone"

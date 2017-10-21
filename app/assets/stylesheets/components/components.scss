@@ -1,14 +1,30 @@
-div.field {
-  margin-top: 15px;
-}
+$orange-input: rgb(255, 151, 93);
+$orange: rgb(255, 106, 103);
+$pink-hot: #F2385A;
 
 input[type=text],[type=password],[type=email] {
   width: 100%;
   line-height: 30px;
-  border: 1px solid rgb(51, 56, 59);
+  border: 1px solid $orange-input;
   font-size: 18pt;
   padding: 10px;
 }
 
 input[type=submit] {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  height: 50px;
+  background: $orange;
+  padding: 15px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0px 15px 0px 0px darken($orange, 5%), 0px 0px 20px 0px #bbb;
+
+  transition: all 0.2s;
+
+  &:active {
+    top: 108px;
+    box-shadow: 0px 7px 0px 0px darken($pink-hot, 5%);
+  }
 }

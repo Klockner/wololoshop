@@ -3,9 +3,6 @@ class AddColumnsToUsers < ActiveRecord::Migration[5.1]
     add_column :users, :name, :string
     change_column_null :users, :name, false
 
-    add_column :users, :username, :string, index: true, unique: true
-    change_column_null :users, :username, false
-
     add_column :users, :cpf, :string, index: true, unique: true
     add_column :users, :birth, :date
     add_column :users, :cellphone, :string
