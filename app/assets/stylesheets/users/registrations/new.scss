@@ -1,4 +1,53 @@
-.registration-container {
-  display: flex;
-  justify-content: center;
+$light-gray: rgb(246, 246, 246);
+$medium-light-gray: rgb(210, 210, 210);
+$medium-gray: rgb(185, 185, 185);
+$blue: rgb(2, 119, 194);
+$blue-button-hover: rgb(8, 126, 201);
+
+.registration {
+  background-color: $light-gray;
+  position:fixed;
+  width:100%;
+  height:100%;
+
+  .field-password {
+    margin-top: 30px;
+    label {
+      font-size: 1em;
+      font-weight: 800;
+    }
+
+    input {
+      margin-top: 5px;
+
+      &:nth-last-child(1) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  input[type=text],[type=password],[type=email] {
+    border-radius: 2px;
+    border: 1px solid $medium-light-gray;
+  }
+
+  .actions {
+    margin-top: 30px;
+
+    input[type=submit] {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .btn-home {
+      background: $blue;
+      box-shadow: 0px 15px 0px 0px darken($blue, 5%), 0px 0px 20px 0px #bbb;
+
+      &:active {
+        top: 108px;
+        box-shadow: 0px 7px 0px 0px darken($blue, 5%);
+      }
+    }
+
+  }
 }

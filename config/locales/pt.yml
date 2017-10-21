@@ -1,0 +1,13 @@
+pt:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: 'Você não preencheu o email'
+            password:
+              blank: 'Você deixou a senha em branco'
+  errors:
+    messages:
+      not_saved: 'Não foi possível salvar'

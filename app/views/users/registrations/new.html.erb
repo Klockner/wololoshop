@@ -1,40 +1,38 @@
-<div class="container">
+<div class="registration container">
   <h2>Cadastro</h2>
 
   <div class="form-fields">
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+
 
       <div class="field">
         <%= f.label 'Nome' %><br />
-        <%= f.text_field :name, autofocus: true %>
+        <%= f.text_field :name, placeholder: 'Ex: Maria da silva', autofocus: true %>
       </div>
 
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email%>
+        <%= f.email_field :email, placeholder: 'Ex: meuemail@exemplo.com'%>
       </div>
 
-      <div class="field">
+
+      <div class="field-password">
         <%= f.label 'Senha' %>
         <% if @minimum_password_length %>
         <em>(No mínimo <%= @minimum_password_length %> caracteres)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "off", placeholder: 'Digite uma senha' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Digite a senha novamente' %>
       </div>
 
-      <div class="field">
-        <%= f.label 'Confirme sua senha' %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
+      <%= devise_error_messages! %>
 
       <div class="actions">
         <%= f.submit "Criar minha conta" %>
+        <%= button_to "Voltar para o Início", new_user_session_path, class: 'btn-home' %>
       </div>
     <% end %>
-
-    <%= link_to('Login', new_user_session_path)  %>
 
   </div>
 
