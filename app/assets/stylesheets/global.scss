@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Exo+2');
+@import url('https://fonts.googleapis.com/css?family=Exo:100,400,800');
 
 $gray: rgb(75, 72, 96);
+$light-gray: rgb(246, 246, 246);
+$medium-gray: rgb(185, 185, 185);
 
 * {
   margin: 0;
@@ -18,8 +20,25 @@ body {
   color: $gray;
 }
 
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: $medium-gray;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: $medium-gray;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: $medium-gray;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $medium-gray;
+}
+
 .container {
-  height: 100%;
   padding: 0;
   margin: 0;
   display: flex;
@@ -31,20 +50,24 @@ body {
 .form-fields {
   width: 600px;
 
-  & .field {
-    margin-top: 10px;
+  .field {
+    margin-top: 15px;
 
-    & label {
-      font-size: 1.2em;
+    label {
+      font-size: 1em;
+      font-weight: 800;
     }
 
-    & .label-checkbox {
+    input {
+      margin-top: 5px;
+    }
+
+    .label-checkbox {
       font-size: 1em;
     }
-
   }
 
-  & .actions {
+  .actions {
     margin-top: 20px;
   }
 }
